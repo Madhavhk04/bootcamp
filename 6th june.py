@@ -42,3 +42,11 @@ def compute_area(height, breadth):
 
 area = compute_area(7, 4)  
 print(area)  
+
+#OOPS
+
+difference = lambda m, n: m - n
+
+result = difference(15, 6)
+print(result)  # Output: 9
+
