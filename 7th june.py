@@ -31,3 +31,15 @@ animal1 = Animal("Tiger", 220)
 
 print(animal1.species)  # Output: Tiger
 print(animal1.weight)   # Output: 220
+
+
+
+# constructor
+
+class MyClass:
+    def __init__(self):  
+        print("Initialization method executed") 
+    def __del__(self):  
+        print("Cleanup method executed")  
+obj = MyClass()  
+del obj  # Output: Cleanup method executed  
