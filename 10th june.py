@@ -157,6 +157,6 @@ for person in data:
         grouped_data[department] = [person]
 
 print(grouped_data)
-
+ 
 
 
