@@ -1,20 +1,9 @@
-# Import Module
-from tkinter import *
- 
-# create root window
-root = Tk()
- 
-# root window title and dimension
-root.title("Hello world")
-# Set geometry(widthxheight)
+from tkinter import*
+root=Tk()
+root.title("WELCOME")
 root.geometry('350x200')
- 
-# adding a label to the root window
-lbl = Label(root, text = "How are you?")
-lbl.grid()
- 
-# function to display text when
-# button is clicked
+labl=Label(root, text="Hello welcome to the website!")
+labl.grid()
 def clicked():
     lbl.configure(text = "clicked")
  
@@ -24,6 +13,5 @@ btn = Button(root, text = "Click me" ,
              fg = "red", command=clicked)
 # set Button grid
 btn.grid(column=1, row=0)
- 
 # Execute Tkinter
 root.mainloop()
