@@ -1,5 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
+from PIL import Image, ImageTk
+import os
 
 class LearningManagementSystem(tk.Tk):
     def __init__(self):
@@ -29,10 +31,24 @@ class LearningManagementSystem(tk.Tk):
         courses_frame = tk.Frame(self)
         courses_frame.pack(pady=10)
 
-        course_images = ["[Image]", "[Image]", "[Image]", "[Image]"]
-        for image in course_images:
-            course_label = tk.Label(courses_frame, text=image, font=("Arial", 14), width=20, height=10, relief="solid")
-            course_label.pack(side=tk.LEFT, padx=10)
+        # Load images and create labels
+        image_paths = [
+            r"C:\Users\devua\OneDrive\Desktop\MADHAV\bootcamp\Data Structures   Algorithms.png",
+            r"C:\Users\devua\OneDrive\Desktop\MADHAV\bootcamp\Database Design  and Modelling  (SQL).png",
+            r"C:\Users\devua\OneDrive\Desktop\MADHAV\bootcamp\Data  Communication  and Computer  Networks.png"
+        ]
+        
+        for path in image_paths:
+            if os.path.exists(path):
+                img = Image.open(path)
+                img = img.resize((150, 150), Image.LANCZOS)  # Resize image using LANCZOS
+                photo = ImageTk.PhotoImage(img)
+                course_label = tk.Label(courses_frame, image=photo, relief="solid")
+                course_label.image = photo  # Keep a reference to avoid garbage collection
+                course_label.pack(side=tk.LEFT, padx=10)
+            else:
+                course_label = tk.Label(courses_frame, text="[Image Not Found]", font=("Arial", 14), width=20, height=10, relief="solid")
+                course_label.pack(side=tk.LEFT, padx=10)
 
         # Sidebar Frame
         sidebar_frame = tk.Frame(self)
@@ -61,3 +77,4 @@ class LearningManagementSystem(tk.Tk):
 if __name__ == "__main__":
     app = LearningManagementSystem()
     app.mainloop()
+
