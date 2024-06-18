@@ -1,11 +1,4 @@
--- DQL STATEMENTS
--- 1) DQL stands for Data Query Language.
 
--- SELECT
--- Used to fetch rows selected from one or more tables.
--- SELECT can be utilized in several ways:
--- A) SELECT with DISTINCT Clause
--- The DISTINCT Clause after SELECT removes duplicate rows from the result set.
 SELECT DISTINCT cname, addr FROM customer;
 
 -- B) SELECT all columns(*)
@@ -14,9 +7,7 @@ SELECT * FROM orders;
 -- C) SELECT by column name
 SELECT oid FROM orders;
 
--- D) SELECT with LIKE(%)
--- Useful for searching using parts of the name
--- a) "dhav" appearing anywhere
+
 SELECT * FROM customer WHERE cname LIKE "%dhav%";
 
 -- b) Starts With "Mad"
@@ -47,24 +38,8 @@ LIMIT 3;
 -- G) SELECT with WHERE
 SELECT * FROM customer WHERE cname = "Madhav";
 
--- ------------------------------------------TASKS-------------------------------------------------------------
-/*
-1) Write a query to retrieve the unique categories of products from the products table.
-2) Write a query to retrieve the customer ID, customer name, and the length of their address
-   as address_length from the customer table.
-3) Write a query to retrieve the order ID, customer name, product name, and the concatenated
-   string 'Order for [product name] by [customer name]' as order_description from the orders, customer,
-   and products tables.
-4) Write a query to retrieve the product ID, product name, price, and a new column price_category that categorizes
-   the products based on their price range (e.g., 'Low' for prices less than 10000, 'Medium' for prices between 10000
-   and 50000, and 'High' for prices greater than 50000).
-5) Write a query to retrieve the customer ID, customer name, and the total order amount for each customer.
-   The total order amount should be retrieved from a subquery that calculates the sum of order amounts for each
-   customer.
-*/
 
--- --------------------------------------------QUERIES-----------------------------------------------------------
--- 1)
+
 SELECT DISTINCT category 
 FROM products;
 
