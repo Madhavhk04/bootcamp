@@ -55,7 +55,7 @@ JOIN products p ON o.pid = p.pid;
 
 -- 4)
 SELECT pid, pname, price,
-       CASE
+       
            WHEN price < 10000 THEN 'Low'
            WHEN price BETWEEN 10000 AND 50000 THEN 'Medium'
            ELSE 'High'
