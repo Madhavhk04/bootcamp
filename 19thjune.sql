@@ -351,3 +351,4 @@ WHERE o.cid = 102;
 -- Question: How does BCNF differ from 3NF? When is it typically used?
 -- Answer: 
 -- BCNF (Boyce-Codd Normal Form) is a higher level of normalization compared
+20th
