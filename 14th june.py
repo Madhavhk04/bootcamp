@@ -78,3 +78,6 @@ if __name__ == "__main__":
     app = LearningManagementSystem()
     app.mainloop()
 
+# Load the dataset
+file_path = r'C:\Users\devua\OneDrive\Desktop\MADHAV\delhivery_data.csv'  # Update this path to your CSV file
+delhivery_data = pd.read_csv(file_path)
